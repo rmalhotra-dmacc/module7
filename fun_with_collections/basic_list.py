@@ -8,6 +8,10 @@ Basic List Assignment
 
 
 def make_list():
+    """
+    Make list function
+    :return: List of 3 numbers
+    """
     u_list = []
     for i in range(0, 3):
         try:
