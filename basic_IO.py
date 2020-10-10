@@ -1,9 +1,10 @@
 """
+Author: Rajiv Malhotra
+Program: basic_IO.py
+Date: 10/09/20
 
-
-
+File I/O using Tuples Assignment.
 """
-
 
 FILE_NAME = 'student_info.txt'
 IOERROR_MSG = 'Cannot open file on file system'
@@ -12,6 +13,11 @@ MAX = 50
 
 
 def write_to_file(*args):
+    """
+    Function accepts a tuple to be added to the end of a file
+    :param args: tuple
+    :return: None
+    """
     try:
         with open(FILE_NAME, 'a') as f:
             f.write('{}, {}:\t'.format(args[1], args[0]))
@@ -23,6 +29,11 @@ def write_to_file(*args):
 
 
 def get_student_info(**kwargs):
+    """
+    Function accepts arguments for student name, prompts user to input as many test scores
+    :param kwargs: Keyword argument for student name
+    :return: None
+    """
     print("Welcome, {} {}".format(kwargs['first_name'], kwargs['last_name']))
     scores = []
     num = 0
